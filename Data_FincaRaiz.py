@@ -81,11 +81,12 @@ class Data_FincaRaiz:
         
         j = 0
 
-        while j < len(bogota_proyecto_nuevo):
+        while j <= len(bogota_proyecto_nuevo):
 
 
         #for links in bogota_proyecto_nuevo:
-
+            print(j)
+            
             response = requests.get(bogota_proyecto_nuevo[j])
             s = BeautifulSoup(response.text, 'lxml')
             print(Data_FincaRaiz.project_name(s))
