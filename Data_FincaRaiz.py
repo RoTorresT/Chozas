@@ -79,14 +79,16 @@ class Data_FincaRaiz:
         bogota_proyecto_nuevo = Data_FincaRaiz.filter_by_words("proyecto-nuevo",bogota)
         #return(len(bogota_proyecto_nuevo))
         
-        j = 0
+        print(len(bogota_proyecto_nuevo))
 
-        while j <= len(bogota_proyecto_nuevo):
+        j = 420
+
+        while j <= (len(bogota_proyecto_nuevo)-1):
 
 
         #for links in bogota_proyecto_nuevo:
             print(j)
-            
+
             response = requests.get(bogota_proyecto_nuevo[j])
             s = BeautifulSoup(response.text, 'lxml')
             print(Data_FincaRaiz.project_name(s))
